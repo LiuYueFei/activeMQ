@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="user" namespace="/" extends="struts-default">
+		<action name="list" class="employeeAction" method="list">
+			<result name="success" type="freemarker">/list.html</result>
+			<result name="failed" type="freemarker">/failed.html</result>
+		</action>
+		<action name="edit" class="employeeAction" method="edit">
+			<result name="success" type="freemarker">/edit.html</result>
+			<result name="error" type="freemarker">/failed.html</result>
+		</action>
+		<action name="update" class="employeeAction" method="update">
+			<result name="success" type="redirect">/success.html</result>
+			<result name="error" type="freemarker">/failed.html</result>
+		</action>
+		<action name="add" class="employeeAction" method="add">
+			<result name="success" type="freemarker">/add.html</result>
+			<result name="error" type="freemarker">/failed.html</result>
+		</action>
+		<action name="addEmp" class="employeeAction" method="addEmp">
+			<result name="success" type="freemarker">/success.html</result>
+			<result name="error" type="freemarker">/failed.html</result>
+		</action>
+		<action name="delete" class="employeeAction" method="delete">
+			<result name="success" type="freemarker">/success.html</result>
+			<result name="error" type="freemarker">/failed.html</result>
+		</action>
+	</package>
+</struts>
